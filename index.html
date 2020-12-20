@@ -1,24 +1,21 @@
 <!doctype html>
 <html>
   <body>
-    <script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
-    <script>
-      var c1 = new mojs.Shape({
-        shape:'circle',
-        radius:{0:'rand(10,50)'},
-        left:0,
-        top:0,
-        x:0,
-        y:0,
-        fill:'yellow',
-        stroke:'tomato',
-        strokeWidth:'rand(1,10)',
-        duration:'rand(200,2000)',
-        delay:0
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+       <script>
+    const bouncyCircle = new mojs.Shape({
+        parent:       '#bouncyCircle',
+        shape:        'circle',
+        fill:         {'#F64040': '#FC46AD'},
+        radius:       {20: 80},
+        duration:     2000,
+        isYoyo:       true,
+        isShowStart:  true,
+        easing:       'elastic.inout',
+        repeat:       1,
       });
-      document.addEventListener('click', function(e){
-        c1.generate().tune({x:e.pageX, y:e.pageY}).replay();
-      });
+      
+      bouncyCircle.play()
     </script>
   </body>
 </html>
