@@ -55,9 +55,9 @@ $(function () {
                         .append("</button>");
                     $("#success > .alert-danger").append(
                         $("<strong>").text(
-                            "Sorry " +
+                            "죄송합니다! " +
                                 firstName +
-                                ", it seems that my mail server is not responding. Please try again later!"
+                                "님! 지금은 문의가 불가능합니다, 카카오톡에서 [!호출]을 사용해주세요."
                         )
                     );
                     $("#success > .alert-danger").append("</div>");
